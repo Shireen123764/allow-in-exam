@@ -1,0 +1,33 @@
+# scenario 1
+#let me know, if in allow to sit in exam!
+
+name=input("enter your name:")
+tclass=int(input("enter a number of total classes:"))
+clss=int(input("enter a number of attandance / classes attanded: (in no(s)):"))
+med_c=int(input("do you have medical certificate?: \press 1. yes \npress 2.for no \n:"))
+per=(clss/tclass)*100
+ 
+if per>=75:
+     print("you're allowed to sit in exam! no medical")
+elif per<=75:
+       print(f"Dear {name} your percentage is below 75%")
+       med_c=int(input("do you have medical certificate?: \press 1. for yes \npress 2.for no \n:"))
+       if med_c== 1:
+           print("your medical certificate is processed for vertification: ")
+           ver=int(input(f"let me know is it signed and stampped? : \npress 1 . for yes \npress 2 . for no:"))
+           if ver == 1:
+               print(f"dear {name}, despit your attandance is low, but your medical certificate is verified and your're allowed to sit in exam")
+           elif ver == 2:
+               print(f"dear {name}, despit your attandance is low, and your medical certificate is not verified and your're not allowed to sit")
+           else:
+               print("invalid input")
+               
+       else:
+            print("you're not allowed to sit in exam!")
+else:
+     print("invalid input, restart the application")
+
+
+
+
+
